@@ -1,0 +1,16 @@
+h1 {{$ctrl.title}}
+
+h2 User
+div id: {{$ctrl.user.id}}
+div balance: {{$ctrl.user.balance}}
+h2 Seat plan
+
+div(
+    class="seat"
+    ng-repeat="seat in $ctrl.seats track by seat.id"
+    ng-click="$ctrl.chooseSeat(seat)"
+    ng-class="{available: seat.available}"
+)
+    span {{seat.number}}
+
+chosen-seat(ng-if="$ctrl.chosenSeat")
