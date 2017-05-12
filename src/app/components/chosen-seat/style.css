@@ -27,6 +27,7 @@ chosen-seat {
 .chosenSeatNumber span{
     font-size: 14px;
     font-weight: 700;
+    display: block;
 }
 
 .bnt {
@@ -51,5 +52,4 @@ chosen-seat {
     .chosenSeat {
         width: 90%;
     }
-
 }

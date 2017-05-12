@@ -44,7 +44,7 @@ div(
                 class="seat"
                 ng-repeat="seat in $ctrl.seats track by seat.id"
                 ng-click="$ctrl.chooseSeat(seat)"
-                ng-class="{available: seat.available}"
+                ng-class="{ available: seat.available, selected: seat.id === $ctrl.chosenSeat.id}"
             )
                 span {{seat.number}}
 

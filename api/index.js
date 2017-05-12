@@ -1,6 +1,9 @@
 var restify = require('restify');
 var fs = require('fs');
 
+// Wasn't declared, automatically appeared at global
+var seats;
+
 loadSeats();
 
 function loadSeats() {
@@ -19,7 +22,7 @@ function saveSeats() {
 }
 
 function bookSeat(req, res) {
-    var seat = seats.find(s => s.number == req.body.number);
+    var seat = seats.find(s => s.number === req.body.number);
     if (!seat.available) return res.send(400, 'Seat is already booked');
 
     seat.available = false;
@@ -32,7 +35,7 @@ function bookSeat(req, res) {
 function getUser(req, res) {
     res.send({
         id: Math.floor(Math.random() * 10000000).toString(16),
-        balance: Math.floor(Math.random() * 30)
+        balance: Math.floor(Math.random() * 30) + 200
     });
 }
 

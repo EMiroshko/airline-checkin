@@ -10,9 +10,10 @@ div(
     div(
         class="chosenSeatNumber"
     )
-        span Your seat number is:
-
-        span {{$ctrl.seat.number}}
+        span Your seat number is: {{$ctrl.seat.number}}
+        span Your seat ID is: {{$ctrl.seat.id}}
+        span Your seat availability is: {{$ctrl.seat.available}}
+        span Your seat price is: {{$ctrl.seat.price}} Euro
 
     input(
         type="button"
