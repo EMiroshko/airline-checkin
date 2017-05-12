@@ -1,9 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 root {
     display: block;
     height: 100%;
     width: 100%;
+    text-align: center;
+}
+
+/*HEADER*/
+
+.mainHeader {
+    color: #191970;
+    border-bottom: 2px solid #d8d8d8;
+    text-align: left;
+}
+
+.mainHeader .flyInfo {
+    float: left;
+    margin-left: 20px;
+}
+
+.flyData {
+    padding: 20px 0;
+    margin: 0;
+}
+
+.mainHeader .userInfo {
+    float: right;
+    margin-right: 20px;
+    padding: 15px 0;
+}
+
+.userInfo h2{
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.userInfoData {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    background-color: #eee;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/*Plane Part*/
+
+.seatHolder {
+    width: 350px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.planeHead {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 5px solid #d8d8d8;
+}
+
+.planeHead h2 {
+    line-height: 250px;
+}
+
+.planeHead:before {
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    border-radius: 50%;
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+}
+
+.fuselage {
+    border-right: 5px solid #d8d8d8;
+    border-left: 5px solid #d8d8d8;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+.fuselage:before,
+.fuselage:after {
+    content: '';
+    position: absolute;
+    top: 400px;
+    display: block;
+    width: 30px;
+    height: 250px;
+    background-color: #d8d8d8;
+}
+
+.fuselage:before {
+    left: -35px;
+}
+
+.fuselage:after {
+    right: -35px;
+}
+
+.fuselage ul {
+    list-style: none;
+    text-align: center;
+}
+
+.exitHolder {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.exitHolder.topExit {
+    top: -40px;
+}
+
+.exitHolder.bottomExit {
+    bottom: 0;
+}
+
+.exitHolder:before,
+.exitHolder:after {
+    content: 'exit';
+    position: absolute;
+    text-transform: uppercase;
+    color: #FFF;
+    display: inline-block;
+    height: 40px;
+    width: 60px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: #006400;
+}
+
+.exitHolder:before {
+    left: 5px;
+}
+
+.exitHolder:after {
+    right: 5px;
+}
+
+.seatList .seat {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #ADD8E6;
+    line-height: 36px;
+    box-sizing: border-box;
 }
 
 .seat.available {
-    background: #afa
+    background: #00FA9A;
+}
+
+.seatList .seat:nth-child(6n-3) {
+    margin-right: 65px;
+}
+
+.seat:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px #800000;
+}
+
+
+@media (max-width: 700px) {
+    .flyData {
+        font-size: 24px;
+        padding: 24px 0;
+    }
+    .userInfo {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .mainHeader .flyInfo,
+    .mainHeader .userInfo {
+        float: none;
+        display: block;
+        padding: 10px 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .flyData {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .seatHolder {
+        width: 280px;
+    }
+    .seatList .seat {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        margin: 2px;
+    }
+    .fuselage:before,
+    .fuselage:after {
+        display: none;
+    }
+
 }

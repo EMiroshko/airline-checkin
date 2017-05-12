@@ -1,3 +1,55 @@
 chosen-seat {
     display: block;
+    padding: 20px 0;
+    border-top: 2px solid #d8d8d8;
+    text-align: center;
+}
+
+.chosenSeat {
+    width: 400px;
+    background-color: #E6F9FF;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.chosenSeat .chosenSeatHeader {
+    padding: 10px 0;
+    background-color: #ADD8E6;
+    border-radius: 10px 10px 0 0;
+}
+
+.chosenSeat .chosenSeatNumber {
+    padding: 10px 0;
+}
+
+.chosenSeatNumber span{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bnt {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 15px;
+    background-color: #004d66;
+    color: #E6F9FF;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}
+
+.bnt:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+@media (max-width: 480px) {
+    .chosenSeat {
+        width: 90%;
+    }
+
 }

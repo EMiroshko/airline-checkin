@@ -1,3 +1,22 @@
-h2 Chosen seat:
-div {{$ctrl.seat.number}}
-input(type="button" value="Book this seat" ng-click="$ctrl.bookSeat()")
+div(
+    class="chosenSeat"
+)
+
+    div(
+        class="chosenSeatHeader"
+    )
+        h2 Chosen seat
+
+    div(
+        class="chosenSeatNumber"
+    )
+        span Your seat number is:
+
+        span {{$ctrl.seat.number}}
+
+    input(
+        type="button"
+        value="Book this seat"
+        ng-click="$ctrl.bookSeat()"
+        class="bnt"
+    )

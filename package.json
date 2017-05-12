@@ -5,6 +5,7 @@
   "author": "Armagan Amcalar <armagan@amcalar.com>",
   "license": "MIT",
   "scripts": {
+    "preinstall": "npm install -g bower",
     "postinstall": "bower install"
   },
   "devDependencies": {
