@@ -8,6 +8,7 @@ root {
     height: 100%;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 /*HEADER*/
@@ -16,6 +17,10 @@ root {
     color: #191970;
     border-bottom: 2px solid #d8d8d8;
     text-align: left;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
 }
 
 .mainHeader .flyInfo {
@@ -56,11 +61,13 @@ root {
 /*Plane Part*/
 
 .seatHolder {
+    position: relative;
+    z-index: 10;
     width: 350px;
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 100px 0 50px;
 }
 
 .planeHead {
@@ -167,8 +174,23 @@ root {
     box-sizing: border-box;
 }
 
+.seatPrice {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 120px;
+    height: 16px;
+    line-height: 16px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 5px;
+    color: #800000;
+    z-index: 110;
+}
+
 .seat.available {
     background: #00FA9A;
+    position: relative;
 }
 
 .seat.selected {
@@ -179,6 +201,10 @@ root {
 .seat.available:hover {
     background: #00FA9A;
     box-shadow: 0 0 0 2px #800000;
+}
+
+.seat.available:hover > .seatPrice {
+    display: block;
 }
 
 .seatList .seat:nth-child(6n-3) {
@@ -211,6 +237,9 @@ root {
     }
     .flyData {
         padding: 0;
+    }
+    .seatHolder {
+        padding: 140px 0 50px;
     }
 }
 

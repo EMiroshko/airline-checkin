@@ -47,6 +47,9 @@ div(
                 ng-class="{ available: seat.available, selected: seat.id === $ctrl.chosenSeat.id}"
             )
                 span {{seat.number}}
+                span(
+                    class="seatPrice"
+                ) price: {{seat.price}} Euro
 
         div(
             class="exitHolder bottomExit"

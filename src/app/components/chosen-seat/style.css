@@ -1,12 +1,13 @@
 chosen-seat {
-    display: block;
-    padding: 20px 0;
-    border-top: 2px solid #d8d8d8;
-    text-align: center;
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    z-index: 100;
+    font-size: 14px;
 }
 
 .chosenSeat {
-    width: 400px;
+    width: 200px;
     background-color: #E6F9FF;
     margin-top: 10px;
     padding-bottom: 20px;
@@ -46,6 +47,21 @@ chosen-seat {
     position: relative;
     top: 1px;
     left: 1px;
+}
+
+@media (max-width: 760px) {
+    chosen-seat {
+        display: block;
+        position: relative;
+        padding: 20px 0;
+        border-top: 2px solid #d8d8d8;
+        text-align: center;
+    }
+
+    .chosenSeat {
+        width: 70%;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px) {
